@@ -8,7 +8,10 @@
     "rollback": "knex migrate:rollback",
     "seed": "knex seed:run",
     "resetdb": "npm run rollback && npm run migrate && npm run seed",
-    "test": "cross-env NODE_ENV=testing jest --watch --verbose --runInBand"
+    "test": "cross-env NODE_ENV=testing jest --watch --verbose --runInBand",
+    "up": "knex migrate:up",
+    "down": "knex migrate:down",
+    "latest": "knex migrate:latest"
   },
   "devDependencies": {
     "@types/jest": "^27.0.0",
